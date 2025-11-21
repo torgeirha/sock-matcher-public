@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sock Matcher</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Sock Matcher</h1>
+  <p>Take or upload a photo of your socks, then find likely pairs based on color similarity.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>Capture / Upload</h2>
+    <button id="start-camera">📷 Take Photo</button>
+    <input id="file-input" type="file" accept="image/*" capture="environment" />
+    <div id="camera-wrapper" hidden>
+      <video id="video" autoplay playsinline></video>
+      <button id="snap">Snap</button>
+      <button id="stop-camera">Close</button>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Options</h2>
+    <label><input type="checkbox" id="pattern-toggle" /> Use Pattern Recognition (coming soon)</label>
+    <button id="process">Find Pairs</button>
+  </section>
+  <section class="card">
+    <h2>Result</h2>
+    <canvas id="result-canvas"></canvas>
+    <button id="download">Download Annotated Image</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
